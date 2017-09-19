@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="content">sadasdasdasdas</div>
+	<input type="button" value="复制" class="btn">
+	<script src="../dist/clipboard.min.js"></script>
+	<script>
+		var clipboard = new Clipboard('.btn',{
+			target:function(){
+				return document.querySelector('#content');
+			}
+		});
+		clipboard.on('success',function(e){
+			console.log(e);
+		})
+	</script>
+</body>
+</html>

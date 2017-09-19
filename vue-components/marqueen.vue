@@ -16,7 +16,8 @@
 				noAnimate:false,
 				currentIndex:0,
 				height:'',
-				length:''
+				length:'',
+				timer:''
 			}
 		},
 		methods:{
@@ -28,6 +29,9 @@
 		      }
 		    }
 		},
+		beforeDestroy(){
+			this.timer && clearInterval(this.timer)
+		},
 		mounted(){
 			let firstItem = this.$refs.box.firstElementChild
 	      	if (!firstItem) {
@@ -37,7 +41,7 @@
 		    this.height = firstItem.offsetHeight
 		    this.cloneNode = firstItem.cloneNode(true)
        		this.$refs.box.appendChild(this.cloneNode)
-			setInterval(()=>{
+			this.timer = setInterval(()=>{
 				this.currentIndex++;				
 				this.currenTranslateY = - (this.height * this.currentIndex );
 				if (this.currentIndex === this.length) {

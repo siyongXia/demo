@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>1</div>
+	<input type="button" id="btn" value="click">
+	<script>
+		window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+	        var info = "错误信息：" + errorMessage + "</br>" +
+	                "出错文件：" + decodeURIComponent(scriptURI) + "</br> " +
+	                "出错行号：" + lineNumber + "</br>" +
+	                "出错列号：" + columnNumber + "</br>" +
+	                "错误详情：" + errorObj + "</br></br>";
+	        document.body.innerHTML = info;
+	    }
+	   var b = a - 1;
+  </script>
+</body>
+</html>

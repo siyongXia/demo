@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		document.addEventListener('siyong',function(){
+			alert('OK');
+		})
+		var fireEvent = function(element,event){  
+	        if (document.createEventObject){  
+	            // IE浏览器支持fireEvent方法  
+	            var evt = document.createEventObject();  
+	            return element.fireEvent('on'+event,evt)  
+	        }  
+	        else{  
+	            // 其他标准浏览器使用dispatchEvent方法  
+	            var evt = document.createEvent( 'HTMLEvents' );  
+	            //event.initEvent(eventType,canBubble,cancelable)
+	            //canBubble:事件是否起泡
+	            //cancelable:是否可以用 preventDefault() 方法取消事件。
+	            //initEvent必须在dispatchEvent之前被调用
+	            evt.initEvent(event, true, true);  
+	            return !element.dispatchEvent(evt);  
+	        }  
+	    }; 
+	    console.log(fireEvent(document,'siyong'));
+    </script>
+</body>
+</html>

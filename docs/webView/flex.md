@@ -20,7 +20,18 @@ npm run build
     display: flex;
 }   
 ```
+<p class="warning">
+  In some cases the minification is destructive to the css, so you can provide your own options to the cssnano-based minifier if needed
+</p>
 解决方案:
-- 1:可以使用vux的flexbox组件
-- 2:为兼容多端平台,flex相关的新属性,慎用
-- 必须找到测试环境跟生产环境打包产生差异的原因;
+- 1:为兼容多端平台,flex相关的新属性,慎用
+- 2: 修改webpack cssLoader配置,不使用minimize
+```
+  var cssLoader = {
+    loader: 'css-loader',
+    options: {
+      minimize: false,
+      sourceMap: options.sourceMap
+    }
+  }
+```

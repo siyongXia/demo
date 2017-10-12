@@ -3,7 +3,7 @@
 <p class="danger">
   在IOS App里面,网页到了顶部手指再往下拉,整个网页都会往下被拖动;前端如果想使用mint-ui的loadmore组件,实现下拉加载更多,效果如下图:在IOS App里面无法触发:bottom-method事件
 </p>
-<img src="/webView/images/pull.gif" alt="">
+<img src="./webView/images/pull.gif" alt="">
 <h2>解决方案</h2>
 - 1.自己监听window的sroll事件,当页面达到顶部的时候,触发loadmore函数;
 - 2.使用vux的scroll组件,相当好用,具体如下:

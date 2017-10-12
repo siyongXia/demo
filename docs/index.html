@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>健康160前端总结</title>
+  <link rel="stylesheet" href="./static/docute.css">
+  <style>
+    .sidebar a + ul {
+      padding-left: 20px;
+    }
+    code {
+      color: orange;
+    }
+    pre code {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./static/docute.js"></script>
+  <script>
+    docute.init({
+      url:'.',
+      nav: [
+        // homepage
+        {title: 'Home', path: '/'}
+      ],
+      toc: './toc.md',
+      announcement: '健康160前端总结'
+    })
+    var newPath,oldPath;
+    window.onhashchange = function(ev) {  
+      newPath = ev.newURL.split('#')[1].split('?')[0],
+      oldPath = ev.oldURL.split('#')[1].split('?')[0]
+      if(newPath === oldPath) {
+        location.href = '/';
+        location.href = newPath;
+        window.location.reload();
+      }
+    }
+  </script>
+
+</body>
+</html>

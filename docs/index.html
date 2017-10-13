@@ -32,12 +32,10 @@
       announcement: '健康160前端总结'
     })
     var newPath,oldPath;
-    window.onhashchange = function(ev) {  
+    window.onhashchange = function(ev) {
       newPath = ev.newURL.split('#')[1].split('?')[0],
       oldPath = ev.oldURL.split('#')[1].split('?')[0]
       if(newPath === oldPath) {
-        location.href = '/';
-        location.href = newPath;
         window.location.reload();
       }
     }

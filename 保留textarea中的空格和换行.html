@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+	 		color:red;
+	 	}
+ 	</style>
+</head>
+<body>
+	<textarea name="" id="content" cols="30" rows="10" placeholder="请输入..."></textarea>
+	<button id="btn">确定</button>
+	<button id="empty">清空</button>
+	<button id="btn1">div->textarea</button>
+	<div id="box"></div>
+	<script>
+		let $ = function(id){
+			return document.querySelector(id)
+		}
+		let btn =$('#btn'),
+			btn1 = $('#btn1'),
+			empty = $('#empty'),
+			contentBox = $('#content'),
+			box = $('#box')
+		btn.addEventListener('click',function(){
+			var str = contentBox.value;
+			//标准浏览器中的回车是\r\n,ie6-8中的换行是\n
+			str = str.replace(/\r\n/g, '<br>').replace(/\n/g, '<br>').replace(/\s/g, '&nbsp;')
+			// str = str.replace(/\r/g,'<br />').replace(/\s/g,'&nbsp;')
+			box.innerHTML = str;
+		})
+		empty.addEventListener('click',function(){
+			content.value = '';
+		})
+		btn1.addEventListener('click',function(){
+			var str = box.innerHTML;
+			str = str.replace(/<br>/g, '\r\n').replace(/&nbsp;/g, ' ');
+			console.log(str)
+			content.value = str;
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <title>健康160</title>
+    <style>
+       @font-face {
+          font-family: 'iconfont';  /* project id 29918 */
+          src: url('//at.alicdn.com/t/font_29918_obwvsr3zr1bp4x6r.eot');
+          src: url('//at.alicdn.com/t/font_29918_obwvsr3zr1bp4x6r.eot?#iefix') format('embedded-opentype'),
+          url('//at.alicdn.com/t/font_29918_obwvsr3zr1bp4x6r.woff') format('woff'),
+          url('//at.alicdn.com/t/font_29918_obwvsr3zr1bp4x6r.ttf') format('truetype'),
+          url('//at.alicdn.com/t/font_29918_obwvsr3zr1bp4x6r.svg#iconfont') format('svg');
+        }
+        
+        .iconfont {
+            font-family: iconfont;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <!-- <script type="text/javascript"  async  src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+    <!-- <script type='text/javascript' async  src='https://assets.growingio.com/sdk/wx/vds-wx-plugin.js'></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.bootcss.com/babel-polyfill/6.23.0/polyfill.min.js"></script> -->
+    <script>
+        window.onload=function(){
+            setTimeout(function(){
+                var gadomain = document.domain;
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', gadomain.indexOf("weixin") != -1 ? 'UA-77294426-1' : 'UA-71249070-1', 'auto');
+                ga('send', 'pageview');    
+                (function(para) {
+                  var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+                  w['sensorsDataAnalytic201505'] = n;
+                  w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+                  var ifs = ['track','quick','register','registerPage','registerOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
+                  for (var i = 0; i < ifs.length; i++) {
+                    w[n][ifs[i]] = w[n].call(null, ifs[i]);
+                  }
+                  if (!w[n]._t) {
+                    x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+                    x.async = 1;
+                    x.src = p;
+                    x.setAttribute('charset','UTF-8');
+                    y.parentNode.insertBefore(x, y);
+                    w[n].para = para;
+                  }
+                })({
+                  sdk_url: 'https://static.91160.com/wechat/js/sensorsdata.min.js',
+                  heatmap_url: 'undefined',
+                  name: 'sa',
+                  web_url: 'https://jiankang160.cloud.sensorsdata.cn/',
+                  server_url: 'https://jiankang160.cloud.sensorsdata.cn:4006/sa?token=015b1a1acfda520e',
+                  heatmap:{}
+                });                
+                sa.quick('autoTrack',{
+                  platForm:location.host.substr(0,location.host.indexOf('.')),
+                  domain:location.host
+                });                         
+            },300);
+        }
+    </script>
+</body>
+
+</html>

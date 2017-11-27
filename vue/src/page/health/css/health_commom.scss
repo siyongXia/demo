@@ -1,0 +1,121 @@
+$gray: #d1d1d1;
+.mr12 {
+    margin-right: 0.32rem;
+}
+
+.c_d1d1d1 {
+    color: $gray
+}
+
+.container {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.bor_b {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.bor_t {
+    border-top: 1px solid #f1f1f1;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.bor_none {
+    border: none !important;
+}
+
+.bor_green {
+    border: 1px solid #00D2C3;
+}
+
+.bor_gray {
+    border: 1px solid $gray;
+}
+
+.flex {
+    display: flex;
+}
+
+.pb30 {
+    padding-bottom: 0.8rem;
+}
+
+.pt18 {
+    padding-top: 0.48rem;
+}
+
+.space_between {
+    justify-content: space-between;
+}
+
+.bor_green {
+    border: 1px solid #00d3c2;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.pt40 {
+    padding-top: 1.06667rem;
+}
+
+.ml78 {
+    margin-left: 2.08rem;
+}
+
+.fs30 {
+    font-size: 0.8rem;
+}
+
+.bg_4a4a4a {
+    background: #4a4a4a;
+}
+
+// 分割线
+.dividle {
+    height: 1.17333rem;
+    line-height: 1.17333rem;
+    text-align: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 1.06667rem;
+        right: 1.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $gray;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 1.06667rem;
+        left: 1.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $gray;
+    }
+}
+
+.fix_bottom {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+button:active {
+    background-color: #f1f1f1;
+}
+
+.pt35 {
+    padding-top: .933333rem;
+}

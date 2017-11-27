@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=S, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="btn">点我</div>
+	<script>
+		document.getElementById('btn').addEventListener('click',function(){
+			console.log(1);
+			window.sessionStorage.setItem('code','123456');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.healthindex {
+	.mb2 {
+		margin-bottom: 0.05333rem;
+	}
+	.container {
+		padding-left: 0.4rem;
+		padding-right: 0.4rem;
+	}
+	.mb15 {
+		margin-bottom: 0.4rem;
+	}	
+	.vux-icon-dot.active {
+		width:10px;
+	}	
+	.vux-header {
+		background-color: #fff;
+		color:#000;
+		>.vux-header-title {
+			color:#000;
+		}
+		.left-arrow::before{
+		    border: 2px solid #333 !important;
+            border-width: 2px 0 0 2px !important;
+		}
+		.vux-header-right a {
+			color:#333 !important;
+		}
+
+	}
+	.vux-swiper-desc {
+		display:none;
+	}
+}
+.bg_FEF {
+	background-color: #FEF6CE;
+}
+.bor_b {
+	border-bottom: 0.02667rem solid #F9F9F9;
+}
+.bor_t {
+	border-top: 0.02667rem solid #F9F9F9;
+}
+.pl30 {
+	padding-left: 0.8rem;
+}
+.pr15 {
+	padding-right:0.4rem;
+}
+.health-custom-bottom{
+	i {
+		background-color: #fff !important;
+	}
+	i.active {
+		background-color: #00d2c3 !important;
+		width:10px !important;
+	}
+}
+.pic_100_75 {
+	width:2.66667rem;
+	height:2.0rem;
+}
+.pic_80_60 {
+	width:2.13333rem;
+	height:1.6rem;
+}
+.vtm {
+	vertical-align: middle;;
+}
+.pb30 {
+	padding-bottom: 0.8rem;
+}
+.mt25 {
+	margin-top: 0.66667rem;
+}
+.h100 {
+	height:2.66667rem;
+}
+.mb20 {
+	margin-bottom: 0.53333rem;
+}
+.mb12 {
+	margin-bottom: 0.32rem;
+}
+.mt30 {
+	margin-top: 0.8rem;
+}
+.health_nodata {
+	width:1.86667rem;
+}

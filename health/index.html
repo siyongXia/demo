@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		scrollbar {visibility:collapse !important;}
+	</style>
+</head>
+<body>
+	<div id="btn">点我</div>
+	<script>
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click',function(){
+			alertIframe({src:'./tasklist.html'})
+		})
+		function alertIframe (obj) {
+			var src = obj.src,
+				width = obj.width || '375px',
+				height = obj.height || '667px';
+			var iframe = document.createElement('iframe'),
+				div = document.createElement('div');
+				close = document.createElement('div');
+			iframe.style = 'position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);border:none;z-index:2;'
+			div.style = 'position:fixed;left:0;top:0;width:100%;height:100%;background:#ccc;z-index:1;'
+			close.style='position:fixed;right:30px;top:30px;width:30px;height:30px;color:#fff;z-index:2;font-size:50px;'
+			close.innerHTML = '×';
+			iframe.src = src;
+			iframe.width = width;
+			iframe.height = height;
+			document.body.appendChild(div);
+			document.body.appendChild(close);
+			document.body.appendChild(iframe);
+			close.onclick = function(){
+				document.body.removeChild(div);
+				document.body.removeChild(close);
+				document.body.removeChild(iframe);
+			}
+		}
+	</script>
+</body>
+</html>

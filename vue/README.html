@@ -1,0 +1,1715 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>README</title></head><body><article class="markdown-body"><h1 id="vue"><a name="user-content-vue" href="#vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>微信端Vue项目介绍</h1>
+<h2 id="1"><a name="user-content-1" href="#1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.技术栈</h2>
+<ul>
+<li>vue2 &mdash;MVVM项目框架,构建单页面应用程序, 实现响应的数据绑定和组合的视图组件。</li>
+<li>vue-router2 &mdash;vue2官方推荐的路由插件,全局配置路由表实现页面的局部刷新</li>
+<li>vue-cli &mdash;vue官方推荐使用的脚手架,方便快速搭建项目结构(本项目使用的模板是webpack-simple)</li>
+<li>axios &mdash;vue官方推荐的交互插件,用于实现向后台发送ajax请求</li>
+<li>vuex &mdash;vue2状态管理插件,实现组件与组件的通信</li>
+<li>webpack2 &mdash;自动化构建工具,将所有的js,css,less,html,vue组件,字体图标,图片等进行压缩打包和es6 to es5转换</li>
+<li>ES6 &mdash;使用ES6的语法可以更加方便,简洁的组织JS代码.通过webpack配置babel-loader自动将ES6转换成ES5</li>
+<li>WEUI/MINT-UI &mdash;UI框架,快速实现页面的构建</li>
+<li>git &mdash;版本管理工具</li>
+</ul>
+<h2 id="2"><a name="user-content-2" href="#2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.项目结构</h2>
+<pre><code>├─.babelrc  --&gt; babel配置文件,用于将es6语法转换为es5语法
+├─.gitignore  --&gt; 配置git需要忽略的文件
+├─index.html  --&gt; 入口页面
+├─package.json --&gt; 配置开发环境和生产环境,以及项目依赖
+├─README.md  --&gt;项目介绍文件
+├─webpack.config.js --&gt;webpack默认的配置文件
+├─dist --&gt; 生产环境目录
+├─node_modules --&gt; 项目依赖第三方类库
+└─src --&gt; 开发环境目录
+    ├─App.vue --&gt; 全局的根组件,通过el选项指定挂载替换的节点
+    ├─main.js --&gt; 程序入口文件,加载各种依赖的类库
+    ├─assets --&gt;静态资源目录
+    │  ├─css
+    │  ├─js
+    │  ├─images
+    │  └─lib
+    │
+    ├─components --&gt;组件目录
+    │  ├─account 
+    │  ├─ask
+    │  ├─common
+    │  ├─Home
+    │  └─notice
+    │
+    ├─router --&gt;路由表,配置每一个路由状态下需要显示的组件
+    │    └─router.config.js
+    └─store --&gt; vuex状态管理
+        ├─actions.js
+        ├─mutations.js
+        ├─store.js
+        └─type.js
+</code></pre>
+
+<h2 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.项目介绍</h2>
+<h3 id="31-vue"><a name="user-content-31-vue" href="#31-vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1 vue框架核心文件介绍</h3>
+<h4 id="311-indexhtml"><a name="user-content-311-indexhtml" href="#311-indexhtml" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.1 index.html</h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;wxxm&lt;/title&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;src/assets/mui/css/mui.css&quot;&gt; --&gt;
+    &lt;script&gt;
+    // 多屏适配解决方案:根据不同的大小,dpr的屏幕设置不同的scale和html的font-size
+      window.mobileUtil = (function(win, doc) {       
+      })(window, document);
+      // 默认直接适配页面
+      mobileUtil.fixScreen();
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;/dist/build.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+</code></pre>
+
+<h4 id="312-appvue"><a name="user-content-312-appvue" href="#312-appvue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.2 App.vue</h4>
+<pre><code>&lt;!-- 模板 --&gt;
+
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+   &lt;!-- 顶部导航 --&gt;
+    &lt;header v-show=&quot;headShow&quot; &gt;
+    &lt;/header&gt;
+    &lt;!-- 中间内容动态显示区域 router-view起占位作用,用于被每一个匹配到的路由指定的组件替换--&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;!-- 底部tabbar --&gt;
+    &lt;div class=&quot;weui-tabbar&quot; v-show=&quot;footerShow&quot;&gt;     
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;!-- JS脚本 --&gt;
+
+&lt;script&gt;
+  import {mapGetters} from 'vuex'
+  export default {
+    data () {
+      return {
+
+      }
+    },
+    computed:mapGetters([
+      'headShow',
+      'footerShow'
+    ]),
+    mounted() {
+
+    },
+    watch:{
+
+    },
+    methods: {
+
+    }
+  }
+&lt;/script&gt;
+
+&lt;!-- css样式 --&gt;
+&lt;style scoped&gt;
+&lt;/style&gt;
+
+</code></pre>
+
+<h4 id="313-mainjs"><a name="user-content-313-mainjs" href="#313-mainjs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.3 main.js</h4>
+<p>模块/组件的加载规则,详细了解请点击<a href="http://www.cnblogs.com/520yang/articles/5039394.html">require加载规则</a><br />
+<pre><code>import Vue from 'vue'
+import App from './App.vue'
+import VueRouter from 'vue-router'
+//导入Vue.store进行状态管理
+import store from './store/store.js'
+// 导入Mint-ui的所有组件
+import Mint from 'mint-ui'
+// 导入mintUI样式
+import 'mint-ui/lib/style.css'
+//导入全局样式
+import '../src/assets/css/site.css'
+//导入weui的样式
+import 'weui/dist/style/weui.min.css'
+//导入路由表
+import routeConfig from './router/router.config.js'
+//导入vuex
+import VueX from 'vuex'
+//使用vue-router
+Vue.use(VueRouter);
+//创建路由
+const router = new VueRouter(routeConfig);
+//全局使用Mint-ui的组件,所有的组件都可以直接使用mint-ui的所有组件
+Vue.use(Mint);
+
+new Vue({
+  el: '#app', //vue实例需要挂载的元素
+  router, //根组件内注入路由
+  store, //根组件内注入store进行状态管理,所有子组件可以通过$store访问
+  render: h =&gt; h(App) //编辑渲染App.vue组件成HTML代码
+})
+
+</code></pre></p>
+<h3 id="32-vue-router2"><a name="user-content-32-vue-router2" href="#32-vue-router2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2 vue-router2介绍</h3>
+<h4 id="321-html"><a name="user-content-321-html" href="#321-html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.1 HTML</h4>
+<pre><code>&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;app&quot;&gt;
+  &lt;h1&gt;Hello App!&lt;/h1&gt;
+  &lt;p&gt;
+    &lt;!-- 使用 router-link 组件来导航. --&gt;
+    &lt;!-- 通过传入 `to` 属性指定链接. --&gt;
+    &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;
+    &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;
+    &lt;router-link to=&quot;/bar&quot;&gt;Go to Bar&lt;/router-link&gt;
+  &lt;/p&gt;
+  &lt;!-- 路由出口 --&gt;
+  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;
+  &lt;router-view&gt;&lt;/router-view&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+<h4 id="322-js"><a name="user-content-322-js" href="#322-js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.2 JS</h4>
+<pre><code>// 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
+
+// 1. 定义（路由）组件。
+// 可以从其他文件 import 进来
+const Foo = { template: '&lt;div&gt;foo&lt;/div&gt;' }
+const Bar = { template: '&lt;div&gt;bar&lt;/div&gt;' }
+
+// 2. 定义路由
+// 每个路由应该映射一个组件。 其中&quot;component&quot; 可以是
+// 通过 Vue.extend() 创建的组件构造器，
+// 或者，只是一个组件配置对象。
+// 我们晚点再讨论嵌套路由。
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+
+// 3. 创建 router 实例，然后传 `routes` 配置
+// 你还可以传别的配置参数, 不过先这么简单着吧。
+const router = new VueRouter({
+  routes // （缩写）相当于 routes: routes
+})
+
+// 4. 创建和挂载根实例。
+// 记得要通过 router 配置参数注入路由，
+// 从而让整个应用都有路由功能
+const app = new Vue({
+  router
+}).$mount('#app')
+
+// 现在，应用已经启动了！
+
+</code></pre>
+
+<h3 id="33-vuex"><a name="user-content-33-vuex" href="#33-vuex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.3 vuex介绍</h3>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。<br />
+<img alt="vuex" src="///E://project-vue/vuex%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" /> <br><br />
+ <center>Vue工作原理</center>   <br><br />
+1. Vuex 使用 单一状态树.用一个对象就包含了全部的应用层级状态。至此它便作为一个『唯一数据源(SSOT)』而存在。意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。<br><br />
+2. Vuex工作流程:整个应用所有需要统一管理的状态都可以防止在vuex.store的实例的state对象中,只有通过mutation才能改变state的状态;在组件内部可以通过触发action,action在触发一个mutations事件,然后mutation再执行响应的回调函数,实现对状态的改变;然后可以通过getters,在组件内部获取store里面的状态.</p>
+<h3 id="34-webpack"><a name="user-content-34-webpack" href="#34-webpack" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.4 webpack</h3>
+<h3 id="341-webpack"><a name="user-content-341-webpack" href="#341-webpack" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.4.1 webpack介绍</h3>
+<blockquote>
+<p>Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</p>
+</blockquote>
+<h3 id="342webpack"><a name="user-content-342webpack" href="#342webpack" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.4.2webpack配置文件介绍</h3>
+<pre><code>var path = require('path')
+var webpack = require('webpack')
+
+module.exports = {
+  // 打包入口文件
+  entry: './src/main.js',
+  // 定义构建后的文件的输出
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'build.js'
+  },
+  // 模块加载定义在module.loaders中。通过正则表达式去匹配不同后缀的文件名，然后给它们定义不同的加载器。
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+          },
+          // other vue-loader options go here
+          //将px自动转换成em
+          postcss: [
+            require('postcss-plugin-for-vue-px2rem-ignore1px')({
+                     //设计.布局按照iphone6的尺寸375*667进行设计
+                       remUnit: 22.5
+                    })
+          ]
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        // 忽略node_modules里面的文件
+        exclude: /node_modules/
+      },
+      // 多个loader之间用!分离,并且相对顺序不能错
+      {
+        test: /\.(css|less)$/,
+        loader: 'style-loader!css-loader!postcss-loader!less-loader'
+      },
+      //加载字体图标
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /muse-ui.src.*?js$/,
+        loader: 'babel'
+      },
+      // 加载图片
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
+      }
+    ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.common.js',
+      'muse-components': 'muse-ui/src'
+    }
+  },
+  // devServer服务配置
+  devServer: {
+    historyApiFallback: true, //控制页面在同一个页面跳转
+    noInfo: true  //关掉提示
+  },
+  performance: {
+    hints: false
+  },
+  devtool: '#eval-source-map'
+}
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '&quot;production&quot;'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+}
+
+</code></pre>
+
+<h3 id="35-axiosaxios"><a name="user-content-35-axiosaxios" href="#35-axiosaxios" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5 axios介绍,更多参考<a href="https://www.npmjs.com/package/axios">axios</a></h3>
+<h4 id="351-axios"><a name="user-content-351-axios" href="#351-axios" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.1 axios特点</h4>
+<ul>
+<li>Make XMLHttpRequests from the browser</li>
+<li>Make http requests from node.js</li>
+<li>Supports the Promise API</li>
+<li>Intercept request and response</li>
+<li>Transform request and response data</li>
+<li>Cancel requests</li>
+<li>Automatic transforms for JSON data</li>
+<li>Client side support for protecting against XSRF</li>
+<li>axios暂时不支持跨域</li>
+</ul>
+<h4 id="352-axios"><a name="user-content-352-axios" href="#352-axios" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.2 axios使用方法</h4>
+<ol>
+<li>GET请求<br />
+<pre><code>axios.get('/user?ID=12345')
+  .then(function (response) { //异步请求成功后的回调
+    console.log(response);
+  })
+  .catch(function (error) { //异步请求失败后的回调
+    console.log(error);
+  });
+  或者
+  axios.get('/user', {
+    params: {   //参数配置项
+      ID: 12345
+    }
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</code></pre></li>
+<li>POST请求<br />
+<pre><code>axios.post(url,params).then(success).catch(fail);
+axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</code></pre></li>
+<li>通用请求方式<br />
+<pre><code>axios({
+  method: 'post',  //请求方式
+  url: '/user/12345',
+  data: {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  }
+});
+</code></pre></li>
+</ol>
+<h3 id="35packagejson"><a name="user-content-35packagejson" href="#35packagejson" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5package.json配置文件</h3>
+<pre><code>{
+  &quot;name&quot;: &quot;wxxm&quot;, //模块名称,可以通过require(模块名称)导入
+  &quot;description&quot;: &quot;A Vue.js project&quot;, //文件描述
+  &quot;version&quot;: &quot;1.0.0&quot;, 
+  &quot;author&quot;: &quot;fangzf &lt;fangzf@91160.com&gt;&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+     &lt;!-- 控制台输入 npm run dev运行开发环境 --&gt;
+    &quot;dev&quot;: &quot;cross-env NODE_ENV=development webpack-dev-server --open --hot&quot;,
+    &lt;!-- 控制台输入 npm run build运行生产环境 --&gt;
+    &quot;build&quot;: &quot;cross-env NODE_ENV=production webpack --progress --hide-modules&quot;
+  },
+  &lt;!-- 项目运行的依赖 --&gt;
+  &quot;dependencies&quot;: {
+    &quot;mint-ui&quot;: &quot;^2.1.1&quot;,
+    &quot;muse-ui&quot;: &quot;^2.0.0-rc.5&quot;,
+    &quot;postcss-plugin-px2rem&quot;: &quot;^0.6.0&quot;,
+    &quot;vue&quot;: &quot;^2.1.0&quot;,
+    &quot;vue-router&quot;: &quot;^2.2.0&quot;,
+    &quot;vuex&quot;: &quot;^2.1.2&quot;
+  },
+  &lt;!-- 项目开发时的依赖 --&gt;
+  &quot;devDependencies&quot;: {
+    &quot;babel-core&quot;: &quot;^6.0.0&quot;,
+    &quot;babel-loader&quot;: &quot;^6.0.0&quot;,
+    &quot;babel-preset-es2015&quot;: &quot;^6.0.0&quot;,
+    &quot;cross-env&quot;: &quot;^3.0.0&quot;,
+    &quot;css-loader&quot;: &quot;^0.25.0&quot;,
+    &quot;file-loader&quot;: &quot;^0.9.0&quot;,
+    &quot;less&quot;: &quot;^2.7.2&quot;,
+    &quot;less-loader&quot;: &quot;^2.2.3&quot;,
+    &quot;mui&quot;: &quot;^1.0.0&quot;,
+    &quot;postcss-loader&quot;: &quot;^1.3.0&quot;,
+    &quot;postcss-plugin-for-vue-px2rem-ignore1px&quot;: &quot;^0.1.2&quot;,
+    &quot;style-loader&quot;: &quot;^0.13.1&quot;,
+    &quot;vue-loader&quot;: &quot;^10.0.0&quot;,
+    &quot;vue-router&quot;: &quot;^2.2.0&quot;,
+    &quot;vue-template-compiler&quot;: &quot;^2.1.0&quot;,
+    &quot;webpack&quot;: &quot;^2.2.0&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^2.2.0&quot;,
+    &quot;weui&quot;: &quot;^1.1.1&quot;
+  }
+}
+</code></pre>
+
+<h2 id="4"><a name="user-content-4" href="#4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. 开发流程</h2>
+<h3 id="41"><a name="user-content-41" href="#41" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.1 开发前准备:</h3>
+<ol>
+<li>安装nodejs,版本大于4.0,且需要时稳定版</li>
+<li>命令行输入npm install nrm -g 全局安装nrm源管理器,用于切换npm安装的源站</li>
+<li>命令行输入nrm ls 查看npm源,使用nrm use cnpm 将npm的源改成淘宝镜像,如下:<br />
+<pre><code>  npm ---- https://registry.npmjs.org/
+* cnpm --- http://r.cnpmjs.org/  //星号表示当前npm设置的源站
+  taobao - https://registry.npm.taobao.org/
+  nj ----- https://registry.nodejitsu.com/
+  rednpm - http://registry.mirror.cqupt.edu.cn/
+  npmMirror  https://skimdb.npmjs.com/registry/
+  edunpm - http://registry.enpmjs.org/
+</code></pre></li>
+</ol>
+<h3 id="42"><a name="user-content-42" href="#42" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2 开发流程</h3>
+<h3 id="421"><a name="user-content-421" href="#421" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.1 启动项目</h3>
+<ol>
+<li>讲代码从git仓库pull到本地</li>
+<li>在项目的根目录下,命令行运行npm install 安装项目依赖</li>
+<li>命令行运行npm run dev在开发环境运行代码调试(浏览器会自动在服务器环境下打开并且获取焦点自动刷新)</li>
+</ol>
+<h3 id="422-vue"><a name="user-content-422-vue" href="#422-vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.2 vue框架结构</h3>
+<ol>
+<li>vue搭建的项目为单页面应用程序,所有的页面刷新都在同一个页面index.html里面跳转,页面跳转通过<code>&lt;router-link to="路由规则"&gt;&lt;/router-link&gt;</code>进行控制,经vue编译后router-link会自动替换成a标签</li>
+<li>项目入库文件为main.js,所有直接或者间接从main.js引入的组件或者第三方类库或者自己写的js,css,都会通过webpack打包到dist目录下的bundle.js文件里面;<br />
+<img alt="流程图" src="///E://project-vue/vue%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D.png" /></li>
+</ol>
+<h3 id="423-vue"><a name="user-content-423-vue" href="#423-vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.3 vue指令</h3>
+<p>vue指令,请查看vue官方文档<a href="http://cn.vuejs.org/v2/api/">vue指令学习</a></p>
+<h3 id="423"><a name="user-content-423" href="#423" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.3 组件</h3>
+<p>vue的开发实质是基于组件的开发,各个组件独立负责自己需要展示的内容,组件与组件间默认情况下相互不影响;单文件组件的定义,请参考官方文档:<a href="http://cn.vuejs.org/v2/guide/single-file-components.html">单文件组件介绍</a>;所有的组件,统一放在./src/components目录里</p>
+<h3 id="423_1"><a name="user-content-423_1" href="#423_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.3 交互</h3>
+<p>vue2.0使用axios与服务器通信进行数据请求;axios在组件中的使用方法:更多vue生命周期的工作机制,请参考官方文档:<a href="http://cn.vuejs.org/v2/guide/instance.html#main">Vue组件生命周期</a></p>
+<ol>
+<li>在组件内导入axios使用:<br />
+<pre><code>&lt;template&gt;
+  &lt;div v-for=&quot;item in list&quot;&gt;
+    {{item.xxx}}
+    {{item.xxx}}
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  import axios from 'axios' 
+  export default {
+    //组件内部的数据,必须通过data方法暴露,才能在template内部使用
+    data(){
+      list:[]
+    },
+    //vue的生命周期函数,在模板挂载到页面之前调用
+    mounted(){
+      this.fetchData();
+    },
+    methods:{
+      fetchData(){
+        //axios遵循es6的promise规范,调用axios的get或者post方法,返回的是一个promise对象
+        axios.get(url)
+          .then((response)=&gt;{
+            //成功后的回调
+            this.list = response.data;
+          })
+          .catch((error)=&gt;{
+            //失败后的回调
+          })
+      }
+    }
+  }
+&lt;/script&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre></li>
+<li>为了vue-resource和angular使用习惯一直,可以在main.js中导入axios,并且将axios对象的引用赋值给Vue.prototype.$http,这样在所有组件内部都可以通过this.$http调用get和post方法:具体实现如下:<br />
+main.js</li>
+</ol>
+<p><pre><code>//使用ES6语法import加载组件/模块
+import Vue from 'vue'
+import App from './App.vue'
+import axios from 'axios'
+Vue.prototype.$http = axios  //将axios挂载到Vue构造函数的原型上,其他页面在使用axios的时候直接 this.$http就可以了
+new Vue({
+  el: '#app', //vue实例需要挂载的元素
+  render: h =&gt; h(App) //编辑渲染App.vue组件成HTML代码
+})
+</code></pre><br />
+***.vue 组件内部(组件内部的this,指向每一个Vue的实例) <br><br />
+main.js<br />
+<pre><code>
+&lt;template&gt;
+  &lt;div v-for=&quot;item in list&quot;&gt;
+    {{item.xxx}}
+    {{item.xxx}}
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default {
+    //组件内部的数据,必须通过data方法暴露,才能在template内部使用
+    data(){
+      list:[]
+    },
+    //vue的生命周期函数,在模板挂载到页面之前调用
+    mounted(){
+      this.fetchData();
+    },
+    methods:{
+      fetchData(){
+        //axios遵循es6的promise规范,调用axios的get或者post方法,返回的是一个promise对象
+        this.$http.get(url)
+          .then((response)=&gt;{
+            //成功后的回调
+            this.list = response.data;
+          })
+          .catch((error)=&gt;{
+            //失败后的回调
+          })
+      }
+    }
+  }
+&lt;/script&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre></p>
+<h3 id="424-vuex"><a name="user-content-424-vuex" href="#424-vuex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2.4 vuex状态管理</h3>
+<ul>
+<li>详细工作流程,参考Vue作者尤雨溪写的vuex官方文档:<a href="http://vuex.vuejs.org/zh-cn/intro.html">vuex</a>; </li>
+<li>项目中使用vuex流程<br />
+  1. 在./src/store目录,里面新建四个文件,代码参考源代码:<ul>
+<li>store.js  创建并导入store对象</li>
+<li>actions.js 存储各种action用于提交mutation事件</li>
+<li>mutations.js 注册mutation事件,管理state对象和设置Getter</li>
+<li>type.js 以常量的形式管理各种事件类型<br />
+  2. 在项目入口文件main.js中导入store.js,并在根组件内部注入,这样,在每一个子组件内部都可以访问store对象<br />
+<pre><code>import Vue from 'vue'
+import App from './App.vue'
+import VueRouter from 'vue-router'
+//导入Vue.store进行状态管理
+import store from './store/store.js'
+
+new Vue({
+  el: '#app', //vue实例需要挂载的元素
+  router, //根组件内注入路由
+  store, //根组件内注入store进行状态管理,所有子组件可以通过$store访问
+  render: h =&gt; h(App) //编辑渲染App.vue组件成HTML代码
+})
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="5"><a name="user-content-5" href="#5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5移动端多屏适配解决方案</h2>
+<ol>
+<li>以iphone6的屏幕大小作为参考进行设计,布局(使用PX);</li>
+<li>使用postcss-plugin-px2em自动将px转换成rem</li>
+<li>html页面顶部加载脚本,自动获取设备的width和dpr,动态设置html的font-size和整个文档的scale,脚本参考如下:<br />
+<pre><code>&lt;script&gt;
+    // 多屏适配解决方案:根据不同的大小,dpr的屏幕设置不同的scale和html的font-size
+      window.mobileUtil = (function(win, doc) {
+        var UA = navigator.userAgent,
+          isAndroid = /android|adr/gi.test(UA),
+          isIos = /iphone|ipod|ipad/gi.test(UA) &amp;&amp; !isAndroid, // 据说某些国产机的UA会同时包含 android iphone 字符
+          isMobile = isAndroid || isIos;  // 粗略的判断
+
+        return {
+          isAndroid: isAndroid,
+          isIos: isIos,
+          isMobile: isMobile,
+
+              isNewsApp: /NewsApp\/[\d\.]+/gi.test(UA),
+          isWeixin: /MicroMessenger/gi.test(UA),
+          isQQ: /QQ\/\d/gi.test(UA),
+          isYixin: /YiXin/gi.test(UA),
+          isWeibo: /Weibo/gi.test(UA),
+          isTXWeibo: /T(?:X|encent)MicroBlog/gi.test(UA),
+
+          tapEvent: isMobile ? 'tap' : 'click',
+
+          /**
+           * 缩放页面
+           */
+          fixScreen: function() {
+                  var metaEl = doc.querySelector('meta[name=&quot;viewport&quot;]'),
+                      metaCtt = metaEl ? metaEl.content : '',
+                      matchScale = metaCtt.match(/initial\-scale=([\d\.]+)/),
+                matchWidth = metaCtt.match(/width=([^,\s]+)/);
+
+                  if ( !metaEl ) { // REM
+                      var docEl = doc.documentElement,
+                          maxwidth = docEl.dataset.mw || 750, // 每 dpr 最大页面宽度
+                          dpr = isIos ? Math.min(win.devicePixelRatio, 3) : 1,
+                          scale = 1 / dpr,
+                          tid;
+
+                      docEl.removeAttribute('data-mw');
+                      docEl.dataset.dpr = dpr;
+                      metaEl = doc.createElement('meta');
+                      metaEl.name = 'viewport';
+                      metaEl.content = fillScale(scale);
+                      docEl.firstElementChild.appendChild(metaEl);
+
+                      var refreshRem = function() {
+                          var width = docEl.getBoundingClientRect().width,
+                          dpr = isIos ? Math.min(win.devicePixelRatio, 3) : 1;
+                          if (width / dpr &gt; maxwidth) {
+                              width = maxwidth * dpr;
+                          }
+                          var rem = width / 16;
+                          docEl.style.fontSize = rem + 'px';
+                      };
+
+                      win.addEventListener('resize', function() {
+                          clearTimeout(tid);
+                          tid = setTimeout(refreshRem, 300);
+                      }, false);
+                      win.addEventListener('pageshow', function(e) {
+                          if (e.persisted) {
+                              clearTimeout(tid);
+                              tid = setTimeout(refreshRem, 300);
+                          }
+                      }, false);
+
+                      refreshRem();
+                  } else if ( isMobile &amp;&amp; !matchScale &amp;&amp; ( matchWidth &amp;&amp; matchWidth[1] != 'device-width' ) ) { // 定宽
+                      var width = parseInt(matchWidth[1]),
+                          iw = win.innerWidth || width,
+                          ow = win.outerWidth || iw,
+                          sw = win.screen.width || iw,
+                          saw = win.screen.availWidth || iw,
+                          ih = win.innerHeight || width,
+                          oh = win.outerHeight || ih,
+                          ish = win.screen.height || ih,
+                          sah = win.screen.availHeight || ih,
+                          w = Math.min(iw,ow,sw,saw,ih,oh,ish,sah),
+                          scale = w / width;
+
+                      if ( scale &lt; 1 ) {
+                          metaEl.content = metaCtt + ',' + fillScale(scale);
+                      }
+                  }
+
+                  function fillScale(scale) {
+                      return 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+                  }
+          },
+
+          /**
+           * 转href参数成键值对
+           * @param href {string} 指定的href，默认为当前页href
+           * @returns {object} 键值对
+           */
+          getSearch: function(href) {
+            href = href || win.location.search;
+            var data = {},reg = new RegExp( &quot;([^?=&amp;]+)(=([^&amp;]*))?&quot;, &quot;g&quot; );
+            href &amp;&amp; href.replace(reg,function( $0, $1, $2, $3 ){
+              data[ $1 ] = $3;
+            });
+            return data;
+          }
+        };
+      })(window, document);
+      // 默认直接适配页面
+      mobileUtil.fixScreen();
+    &lt;/script&gt;
+</code></pre></li>
+</ol>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开发技术难点</h2>
+<ol>
+<li>所有的MVC/MVVM框架不推荐直接操作DOM,不推荐使用类似Jquery之类的库,很多效果实现起来比较麻烦,如动画</li>
+<li>很多现有的UI框架无法直接使用,需要在UI框架原有的基础上进行样式重置甚至需要自己封装组件实现</li>
+</ol></article></body></html>
